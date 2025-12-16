@@ -1,0 +1,11 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+directories:
+  - path: vendor
+    contents:
+      - path: kamaji
+        githubRelease:
+          slug: clastix/cluster-api-control-plane-provider-kamaji
+          tag: v0.16.0
+          assetNames: ["control-plane-components.yaml"]
+          disableAutoChecksumValidation: true
