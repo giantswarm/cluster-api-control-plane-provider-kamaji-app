@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: '{{ .Release.Namespace }}'
+
+resources:
+- tmp/input/control-plane-components.yaml
+- patches/add-cilium-networkpolicy.yaml
+
+patches:
+- path: patches/patch-delete-namespace.yaml
+- path: patches/patch-deployment.yaml
+
+transformers:
+  - patches/transformer-custom-labels.yaml

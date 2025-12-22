@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- changed: `app.giantswarm.io` label group was changed to `application.giantswarm.io`
+### Added
+
+- Add initial chart at upstream v0.16.0
 
 [Unreleased]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/tree/main

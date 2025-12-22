@@ -1,68 +1,27 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/cluster-api-control-plane-provider-kamaji-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/cluster-api-control-plane-provider-kamaji-app/tree/main)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/badge)](https://securityscorecards.dev/viewer/?uri=github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app)
 
-[Guide about how to manage an app on Giant Swarm](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
-
 # cluster-api-control-plane-provider-kamaji-app chart
 
-Giant Swarm offers a cluster-api-control-plane-provider-kamaji-app App which can be installed in workload clusters.
-Here, we define the cluster-api-control-plane-provider-kamaji-app chart with its templates and default configuration.
+This repository contains a Helm chart for the cluster-api-control-plane-provider-kamaji-app App by Giant Swarm. The Kamaji controller it deploys is a Cluster API Control Plane Provider for Kamaji, which enables the hosting of Control Planes for Workload Clusters inside Giant Swarm Management Clusters.
 
-**What is this app?**
+## Updating
 
-**Why did we add it?**
+> [!WARNING]
+> DO NOT merge Renovate PRs without following the instructions below.
+>
+> Failure to do so will not update the chart itself.
 
-**Who can use it?**
+### Renovate updates
 
-## Installing
+1. Check out the PR created by Renovate.
+2. Run `sync/sync.sh` which will retrieve the asset from the upstream release, customize it for Giant Swarm, and update the ch  art files.
 
-There are several ways to install this app onto a workload cluster.
+### Manual updates
 
-- [Using GitOps to instantiate the App](https://docs.giantswarm.io/tutorials/continuous-deployment/apps/add-appcr/)
-- By creating an [App resource](https://docs.giantswarm.io/reference/platform-api/crd/apps.application.giantswarm.io) using the platform API as explained in [Getting started with App Platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/).
-
-## Configuring
-
-### values.yaml
-
-**This is an example of a values file you could upload using our web interface.**
-
-```yaml
-# values.yaml
-
-```
-
-### Sample App CR and ConfigMap for the management cluster
-
-If you have access to the Kubernetes API on the management cluster, you could create the App CR and ConfigMap directly.
-
-Here is an example that would install the app to workload cluster `abc12`:
-
-```yaml
-# appCR.yaml
-
-```
-
-```yaml
-# user-values-configmap.yaml
-
-```
-
-See our [full reference on how to configure apps](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/app-configuration/) for more details.
-
-## Compatibility
-
-This app has been tested to work with the following workload cluster release versions:
-
-- _add release version_
-
-## Limitations
-
-Some apps have restrictions on how they can be deployed.
-Not following these limitations will most likely result in a broken deployment.
-
-- _add limitation_
+1. Update the `tag` field in [`vendir.yml`](vendir.yml) to the desired upstream version.
+2. Run `sync/sync.sh` which will retrieve the asset from the upstream release, customize it for Giant Swarm, and update the chart files.
 
 ## Credit
 
-- {APP HELM REPOSITORY}
+- https://github.com/clastix/cluster-api-control-plane-provider-kamaji
