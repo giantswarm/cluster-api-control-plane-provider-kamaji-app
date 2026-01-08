@@ -26,3 +26,5 @@ done
 ./sync/patches/kustomize/patch.sh
 # set up the chart dir
 ./sync/patches/chart/patch.sh
+# keep the linters happy
+./sync/patches/kube-linter/patch.sh
