@@ -26,7 +26,7 @@ workflows:
         app_name: cluster-api-control-plane-provider-kamaji-app
         app_collection_repo: kamaji-addons-app-collection
         requires:
-        - package-and-push-chart-on-tag
+        - package-and-push-chart
         filters:
           branches:
             ignore: /.*/
