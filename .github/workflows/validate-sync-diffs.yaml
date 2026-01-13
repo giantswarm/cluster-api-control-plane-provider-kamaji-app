@@ -1,0 +1,48 @@
+name: "Validate sync diffs"
+
+on:
+  - pull_request
+
+jobs:
+  check:
+    name: "Run sync.sh"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Download vendir
+        uses: giantswarm/install-binary-action@v4
+        with:
+          binary: "vendir"
+          version: "0.45.0"
+          download_url: "https://github.com/carvel-dev/vendir/releases/download/v${version}/vendir-linux-amd64"
+          smoke_test: "${binary} --version"
+
+      - name: Download yq
+        uses: giantswarm/install-binary-action@v4
+        with:
+          binary: "yq"
+          version: "4.50.1"
+          download_url: "https://github.com/mikefarah/yq/releases/download/v${version}/yq_linux_amd64"
+          binary_new_name: "yq"
+          smoke_test: "${binary} --version"
+
+      - name: Download kustomize
+        uses: giantswarm/install-binary-action@v4
+        with:
+          binary: "kustomize"
+          version: "5.8.0"
+          download_url: "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v${version}/kustomize_v5.8.0_linux_amd64.tar.gz"
+          tarball_binary_path: "${binary}"
+          smoke_test: "${binary} version"
+
+      - name: Run sync.sh
+        run: |
+          ./sync/sync.sh
+
+      - name: Show diff
+        run: |
+          git diff --exit-code
