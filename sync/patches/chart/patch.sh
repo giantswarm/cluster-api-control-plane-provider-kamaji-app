@@ -29,10 +29,3 @@ sed -i -E "s/APP_VERSION_PLACEHOLDER/${UPSTREAM_SYNC_VERSION_STRIPPED}/" "${CHAR
 
 # reset the version in Chart.yaml
 sed -i -E "s/^version.*$/version: ${CHART_VERSION}/" "${CHART_DIR}/Chart.yaml"
-
-# copy over values file and schema
-cp manifests/values.yaml "${CHART_DIR}"/values.yaml
-cp manifests/values.schema.json "${CHART_DIR}"/values.schema.json
-
-# set the image tag  in values.yaml
-sed -i -E "s/tag.*$/tag: ${UPSTREAM_SYNC_VERSION}/" "${CHART_DIR}/values.yaml"
