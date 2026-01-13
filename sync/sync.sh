@@ -30,3 +30,8 @@ done
 ./sync/patches/values/patch.sh
 # keep the linters happy
 ./sync/patches/kube-linter/patch.sh
+
+if ! git diff --quiet --exit-code helm/ ; then
+    echo -e "\n---------- PRINTING GIT DIFF ----------\n"
+    git diff helm/
+fi
