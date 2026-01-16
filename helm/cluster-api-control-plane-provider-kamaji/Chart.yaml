@@ -6,11 +6,13 @@ version: 0.1.1
 name: cluster-api-control-plane-provider-kamaji
 description: The Kamaji Control Plane provider for Cluster API
 home: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app
-icon: https://raw.githubusercontent.com/clastix/kamaji/refs/heads/master/assets/logo-white.png
+icon: https://s.giantswarm.io/app-icons/kamaji/1/dark.png
 annotations:
   io.giantswarm.application.audience: "giantswarm"
   io.giantswarm.application.managed: "true"
   io.giantswarm.application.team: "rocket"
+  io.giantswarm.application.upstream-chart-url: "https://github.com/clastix/cluster-api-control-plane-provider-kamaji"
+  io.giantswarm.application.upstream-chart-version: "0.16.0"
 maintainers:
   - name: Team Rocket
     email: team-rocket@giantswarm.io

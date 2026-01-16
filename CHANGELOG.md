@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add GitHub actions workflow to run `sync.sh` on PRs.
+- Add additional metadata to `Chart.yaml`.
+- Add README to sync dir.
+
+### Changed
+
+- Separate values patching into its own patch directory.
+- Ensure team annotation is applied to all resources.
+
 ## [0.1.1] - 2026-01-08
 
 ### Fixed

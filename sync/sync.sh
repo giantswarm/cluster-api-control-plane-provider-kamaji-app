@@ -26,5 +26,12 @@ done
 ./sync/patches/kustomize/patch.sh
 # set up the chart dir
 ./sync/patches/chart/patch.sh
+# copy of values files
+./sync/patches/values/patch.sh
 # keep the linters happy
 ./sync/patches/kube-linter/patch.sh
+
+if ! git diff --quiet --exit-code helm/ ; then
+    echo -e "\n---------- PRINTING GIT DIFF ----------\n"
+    git diff helm/
+fi
