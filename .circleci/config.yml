@@ -23,7 +23,7 @@ workflows:
     - architect/push-to-app-collection:
         context: architect
         name: push-to-kamaji-addons-app-collection
-        app_name: cluster-api-control-plane-provider-kamaji-app
+        app_name: cluster-api-control-plane-provider-kamaji
         app_collection_repo: kamaji-addons-app-collection
         requires:
         - package-and-push-chart
