@@ -12,7 +12,7 @@ metadata:
     cluster.x-k8s.io/provider: kamaji
     helm.sh/chart: '{{ .Chart.Name }}'
     io.giantswarm.application.team: '{{ index .Chart.Annotations "io.giantswarm.application.team"
-      | quote }}'
+      }}'
   name: capi-kamaji-leader-election-rolebinding
   namespace: '{{ .Release.Namespace }}'
 roleRef:
