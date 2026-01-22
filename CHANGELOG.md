@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-01-22
+
 ### Fixed
 
 - Fix team annotation lookup key.
@@ -53,7 +55,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add initial chart at upstream v0.16.0
 
-[Unreleased]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.3.1...HEAD
+[0.3.1]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.3.0...v0.3.1
 [0.3.0]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app/compare/v0.1.1...v0.2.0
