@@ -1,0 +1,31 @@
+apiVersion: kyverno.io/v2
+kind: PolicyException
+metadata:
+  labels:
+    app.kubernetes.io/instance: '{{ .Release.Name }}'
+    app.kubernetes.io/managed-by: '{{ .Release.Service }}'
+    app.kubernetes.io/name: '{{ .Chart.Name }}'
+    app.kubernetes.io/version: '{{ .Chart.AppVersion }}'
+    helm.sh/chart: '{{ .Chart.Name }}'
+    io.giantswarm.application.team: '{{ index .Chart.Annotations "io.giantswarm.application.team"
+      }}'
+  name: capi-kamaji-controller-manager
+  namespace: policy-exceptions
+spec:
+  background: true
+  exceptions:
+  - policyName: restrict-seccomp-strict
+    ruleNames:
+    - autogen-check-seccomp-strict
+    - check-seccomp-strict
+  match:
+    any:
+    - resources:
+        kinds:
+        - Deployment
+        - ReplicaSet
+        - Pod
+        names:
+        - capi-kamaji-controller-manager*
+        namespaces:
+        - '{{ .Release.Namespace }}'
