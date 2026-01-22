@@ -24,6 +24,8 @@ done
 # patches
 # add/remove/patch various components in the upstream manifest
 ./sync/patches/kustomize/patch.sh
+# add a polex manually (cannot be created with kustomize)
+./sync/patches/polex/patch.sh
 # set up the chart dir
 ./sync/patches/chart/patch.sh
 # copy of values files
