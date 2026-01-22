@@ -2,7 +2,7 @@ apiVersion: v2
 # upstream version
 appVersion: 0.16.0
 # giantswarm app version
-version: 0.3.2
+version: 0.4.0
 name: cluster-api-control-plane-provider-kamaji
 description: The Kamaji Control Plane provider for Cluster API
 home: https://github.com/giantswarm/cluster-api-control-plane-provider-kamaji-app
