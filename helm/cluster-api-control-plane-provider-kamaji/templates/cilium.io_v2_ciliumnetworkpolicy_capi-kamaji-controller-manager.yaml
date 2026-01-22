@@ -6,9 +6,9 @@ metadata:
     app.kubernetes.io/managed-by: '{{ .Release.Service }}'
     app.kubernetes.io/name: '{{ .Chart.Name }}'
     app.kubernetes.io/version: '{{ .Chart.AppVersion }}'
-    application.giantswarm.io/team: '{{ index .Chart.Annotations "application.giantswarm.io/team"
-      | quote }}'
     helm.sh/chart: '{{ .Chart.Name }}'
+    io.giantswarm.application.team: '{{ index .Chart.Annotations "io.giantswarm.application.team"
+      | quote }}'
   name: capi-kamaji-controller-manager
   namespace: '{{ .Release.Namespace }}'
 spec:

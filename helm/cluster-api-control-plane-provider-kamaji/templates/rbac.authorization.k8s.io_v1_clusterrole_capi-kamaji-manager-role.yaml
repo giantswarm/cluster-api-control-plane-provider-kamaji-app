@@ -6,10 +6,10 @@ metadata:
     app.kubernetes.io/managed-by: '{{ .Release.Service }}'
     app.kubernetes.io/name: '{{ .Chart.Name }}'
     app.kubernetes.io/version: '{{ .Chart.AppVersion }}'
-    application.giantswarm.io/team: '{{ index .Chart.Annotations "application.giantswarm.io/team"
-      | quote }}'
     cluster.x-k8s.io/provider: kamaji
     helm.sh/chart: '{{ .Chart.Name }}'
+    io.giantswarm.application.team: '{{ index .Chart.Annotations "io.giantswarm.application.team"
+      | quote }}'
   name: capi-kamaji-manager-role
 rules:
 - apiGroups:

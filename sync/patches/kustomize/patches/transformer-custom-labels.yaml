@@ -9,7 +9,7 @@ labels:
   helm.sh/chart: "{{ .Chart.Name }}"
   app.kubernetes.io/name: "{{ .Chart.Name }}"
   app.kubernetes.io/instance: "{{ .Release.Name }}"
-  application.giantswarm.io/team: "{{ index .Chart.Annotations \"application.giantswarm.io/team\" | quote }}"
+  io.giantswarm.application.team: "{{ index .Chart.Annotations \"io.giantswarm.application.team\" | quote }}"
 fieldSpecs:
   - path: metadata/labels
     create: true
