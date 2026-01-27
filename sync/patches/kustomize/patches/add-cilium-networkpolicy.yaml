@@ -10,7 +10,6 @@ spec:
   endpointSelector:
     matchLabels:
       cluster.x-k8s.io/provider: kamaji
-      app.kubernetes.io/component: manager
   ingress:
   - fromEntities:
     - cluster
