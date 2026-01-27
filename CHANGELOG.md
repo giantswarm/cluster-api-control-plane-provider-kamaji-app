@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Raise pod memory limit from 128MB to 256MB.
+
 ### Fixed
 
 - Fix pod selector in `ciliumNetworkPolicy`.
