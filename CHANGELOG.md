@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update app icon to the v2 Giant Swarm kamaji icon.
+
 ## [0.4.2] - 2026-01-27
 
 ### Changed
