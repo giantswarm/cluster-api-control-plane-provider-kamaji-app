@@ -1,25 +1,27 @@
-name: Validate sync diffs
+name: Sync vendir changes
 
 on:
-  pull_request:
-    paths:
-      - 'helm/**'
-      - 'sync/**'
-      - 'vendir.yml'
-      - 'vendir.lock.yml'
+  push:
+    branches:
+      - 'renovate/vendir/**'
+  workflow_dispatch:
 
 permissions: {}
 
 jobs:
-  check:
-    name: Check sync.sh was called
+  sync:
+    name: Run sync script and push
     runs-on: ubuntu-24.04
-    # release pull requests bump the chart version, which sync.sh resets to the
-    # last published release.
-    if: "!startsWith(github.head_ref, 'main#release#')"
+    # our own push triggers this workflow again. the sync is idempotent so the
+    # second run pushes nothing, but skip it to save a run.
+    if: "!startsWith(github.event.head_commit.message, 'chore: apply sync patches')"
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.ref_name }}
+          # pushing with a bot token re-triggers the checks on the pull request
+          token: ${{ secrets.TAYLORBOT_GITHUB_ACTION }}
 
       - name: Install vendir
         uses: giantswarm/install-binary-action@5bef88f65012037dd836117c8d344b21bb559854 # v4.1.0
@@ -57,5 +59,17 @@ jobs:
       - name: Run sync script
         run: ./sync/sync.sh
 
-      - name: Check there is no diff
-        run: git diff --exit-code && [ -z "$(git status --porcelain)" ]
+      - name: Update changelog
+        run: ./sync/changelog.sh
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "dev@giantswarm.io"
+          git config --local user.name "taylorbot"
+          git add --all
+          if git diff --cached --quiet ; then
+              echo "No changes after sync; nothing to push."
+              exit 0
+          fi
+          git commit -m "chore: apply sync patches"
+          git push origin "HEAD:${{ github.ref_name }}"
