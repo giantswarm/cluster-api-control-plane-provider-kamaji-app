@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update architect to v10.11.1 (giantswarm/cluster-api-control-plane-provider-kamaji-app#81)
 - Update architect to v10.12.1 (giantswarm/cluster-api-control-plane-provider-kamaji-app#83)
 - Update architect to v10.12.2 (giantswarm/cluster-api-control-plane-provider-kamaji-app#85)
+- Add Github action to create an issue in `giantswarm/giantswarm` for Team Rocket on vendir updates.
 
 ### Added
 
