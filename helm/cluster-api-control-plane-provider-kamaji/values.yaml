@@ -1,7 +1,7 @@
 image:
   name: giantswarm/cluster-api-control-plane-provider-kamaji
   repository: gsoci.azurecr.io
-  tag: v0.20.0
+  tag: v0.21.0
 
 resources:
   limits:
