@@ -23,6 +23,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a check which fails a pull request if the sync script was not run.
 - Add shared helpers file to sync dir.
 
+### Fixed
+
+- Fix changelog generation script.
+
 ## [0.4.3] - 2026-06-17
 
 ### Changed
