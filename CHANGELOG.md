@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update carvel-dev/vendir to v0.46.3 (giantswarm/cluster-api-control-plane-provider-kamaji-app#102)
 - Update architect to v10.14.18 (giantswarm/cluster-api-control-plane-provider-kamaji-app#108)
 - Improve changelog generation script.
+- Update upstream cluster-api-control-plane-provider-kamaji chart to v0.21.0.
 
 ### Added
 
