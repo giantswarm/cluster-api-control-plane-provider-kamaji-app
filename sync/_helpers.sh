@@ -14,3 +14,6 @@ CHART_DIR="${REPO_DIR}/helm/cluster-api-control-plane-provider-kamaji" ; readonl
 
 # root dir of the vendir synced chart
 VENDIR_SYNC_DIR="${REPO_DIR}/vendor/kamaji" ; readonly VENDIR_SYNC_DIR
+
+# used by sync/changelog.sh to add the upstream chart name to the changelog entry.
+UPSTREAM_NAME="cluster-api-control-plane-provider-kamaji" ; readonly UPSTREAM_NAME

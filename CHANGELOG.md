@@ -9,8 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update upstream cluster-api-control-plane-provider-kamaji chart to null.
-
 - Use the `giantswarm-release` GitHub App instead of the taylorbot personal access token to push sync commits.
 - Update architect to v10.8.0 (giantswarm/cluster-api-control-plane-provider-kamaji-app#80)
 - Update architect to v10.11.1 (giantswarm/cluster-api-control-plane-provider-kamaji-app#81)
@@ -22,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update architect to v10.14.7 (giantswarm/cluster-api-control-plane-provider-kamaji-app#97)
 - Update carvel-dev/vendir to v0.46.3 (giantswarm/cluster-api-control-plane-provider-kamaji-app#102)
 - Update architect to v10.14.18 (giantswarm/cluster-api-control-plane-provider-kamaji-app#108)
+- Improve changelog generation script.
 
 ### Added
 
