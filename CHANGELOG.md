@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improve changelog generation script.
 - Update upstream cluster-api-control-plane-provider-kamaji chart to v0.21.0.
 - Update architect to v10.15.1 (giantswarm/cluster-api-control-plane-provider-kamaji-app#109)
+- Update architect to v10.16.3 (giantswarm/cluster-api-control-plane-provider-kamaji-app#110)
 
 ### Added
 
