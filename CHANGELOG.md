@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Create the vendir update issue as the `giantswarm-project-automation` GitHub App instead of architectbot's `ISSUE_AUTOMATION` token, and take the board item when the board's auto-add adds it first (giantswarm/giantswarm#38800).
 - Use the `giantswarm-release` GitHub App instead of the taylorbot personal access token to push sync commits.
 - Update architect to v10.8.0 (giantswarm/cluster-api-control-plane-provider-kamaji-app#80)
 - Update architect to v10.11.1 (giantswarm/cluster-api-control-plane-provider-kamaji-app#81)
