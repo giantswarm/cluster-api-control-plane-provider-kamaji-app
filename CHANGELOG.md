@@ -28,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update architect to v10.16.6 (giantswarm/cluster-api-control-plane-provider-kamaji-app#112)
 - Update architect to v10.16.7 (giantswarm/cluster-api-control-plane-provider-kamaji-app#114)
 - Update architect to v10.17.0 (giantswarm/cluster-api-control-plane-provider-kamaji-app#119)
+- Update architect to v10.17.4 (giantswarm/cluster-api-control-plane-provider-kamaji-app#123)
 
 ### Added
 
