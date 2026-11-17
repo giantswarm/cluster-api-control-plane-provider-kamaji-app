@@ -11,4 +11,5 @@ echo "Adding policy-exception"
 
 set -x
 cp -r "${SCRIPT_DIR}"/manifests/policy-exception.yaml "${CHART_DIR}"/templates/policy-exception.yaml
+cp -r "${SCRIPT_DIR}"/manifests/policy-exception-cel.yaml "${CHART_DIR}"/templates/policy-exception-cel.yaml
 { set +x; } 2>/dev/null

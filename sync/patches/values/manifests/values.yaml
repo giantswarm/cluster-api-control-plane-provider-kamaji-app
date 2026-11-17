@@ -10,3 +10,9 @@ resources:
   requests:
     cpu: 10m
     memory: 64Mi
+
+kyvernoPolicyExceptions:
+  enabled: true
+  legacy:
+    # Render the kyverno.io/v2 PolicyException, which only applies to ClusterPolicies. Turn it off once the cluster runs the CEL policies.
+    enabled: true

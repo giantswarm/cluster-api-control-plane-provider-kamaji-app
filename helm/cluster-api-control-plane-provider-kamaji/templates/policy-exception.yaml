@@ -1,3 +1,4 @@
+{{- if and .Values.kyvernoPolicyExceptions.enabled .Values.kyvernoPolicyExceptions.legacy.enabled }}
 apiVersion: kyverno.io/v2
 kind: PolicyException
 metadata:
@@ -9,8 +10,9 @@ metadata:
     helm.sh/chart: '{{ .Chart.Name }}'
     io.giantswarm.application.team: '{{ index .Chart.Annotations "io.giantswarm.application.team"
       }}'
+    policy.giantswarm.io/migrated-to-cel: "true"
   name: capi-kamaji-controller-manager
-  namespace: policy-exceptions
+  namespace: giantswarm
 spec:
   background: true
   exceptions:
@@ -29,3 +31,4 @@ spec:
         - capi-kamaji-controller-manager*
         namespaces:
         - '{{ .Release.Namespace }}'
+{{- end }}
