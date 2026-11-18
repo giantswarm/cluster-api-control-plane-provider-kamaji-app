@@ -40,5 +40,5 @@ spec:
       request.kind.kind in ['Deployment', 'ReplicaSet', 'Pod', 'ServiceAccount'] &&
       request.namespace == '{{ .Release.Namespace }}' &&
       has(object.metadata.name) &&
-      object.metadata.name.startsWith('capi-kamaji-controller-manager')
+      (object.metadata.name == 'capi-kamaji-controller-manager' || object.metadata.name.startsWith('capi-kamaji-controller-manager-'))
 {{- end }}
