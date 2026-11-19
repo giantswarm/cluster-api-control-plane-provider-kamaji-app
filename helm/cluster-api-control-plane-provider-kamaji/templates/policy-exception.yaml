@@ -12,7 +12,7 @@ metadata:
       }}'
     policy.giantswarm.io/migrated-to-cel: "true"
   name: capi-kamaji-controller-manager
-  namespace: giantswarm
+  namespace: kube-system
 spec:
   background: true
   exceptions:

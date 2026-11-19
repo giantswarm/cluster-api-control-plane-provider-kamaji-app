@@ -13,7 +13,7 @@ metadata:
   annotations:
     "helm.sh/hook": "pre-install,pre-upgrade"
   name: capi-kamaji-controller-manager
-  namespace: giantswarm
+  namespace: kube-system
 spec:
   policyRefs:
   - name: restrict-seccomp-strict
